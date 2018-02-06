@@ -48,6 +48,7 @@ function dkuk_podcast_cpt() {
 		'show_in_menu'          => true,
 		'menu_position'         => 6,
 		'menu_icon'             => 'dashicons-microphone',
+		'rewrite'            => array( 'slug' => 'podcasts' ),
 		'show_in_admin_bar'     => true,
 		'show_in_nav_menus'     => true,
 		'can_export'            => true,
