@@ -1,10 +1,14 @@
 <?php
-// Plugin Name: DKUK Podcasts
-// Version: 1.0
-// Author: Jacob Charles Wilson
-// Author URI: https://jacobcharleswilson.com
-// Adds Podcast Custom Post Type
-// https://generatewp.com/post-type/
+// Plugin Name:			Podcast Custom Post Type
+// Plugin URI:			https://github.com/jclwilson/dkuk-podcast-cpt
+// Description:			Lets you publish podcasts on the site, requires the Advanced Custom Fields (ACF) plugin to be installed.
+// Version:				1.0.0
+// Author:				Jacob Charles Wilson
+// Author URI:			https://jacobcharleswilson.com
+// License:				GNU General Public License v2
+// License URI:			http://www.gnu.org/licenses/gpl-2.0.html
+// Text Domain:			wp-contact-widget
+// GitHub Plugin URI:	https://github.com/jclwilson/dkuk-podcast-cpt
 
 function dkuk_podcast_cpt() {
 
