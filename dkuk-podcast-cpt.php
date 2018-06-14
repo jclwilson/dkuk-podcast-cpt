@@ -62,6 +62,29 @@ function dkuk_podcast_cpt() {
 		'capability_type'       => 'post',
 	);
 	register_post_type( 'Podcast', $podcast_args );
+	
+	
+	// Sets admin columns for Podcasts
+function dkuk_podcast_custom_columns( $columns ) {
+    $columns = array(
+      'cb' => $columns['cb'],
+	  'image' => __( 'Image' ),
+	  'title' => __( 'Title' ),
+	  'date' => __( 'Date' ),
+    );
+  return $columns;
+}
+add_filter( 'manage_podcast_posts_columns', 'dkuk_podcast_custom_columns' );
+	
+// Adds data to Podcast admin columns
+function dkuk_podcast_custom_columns_data( $column, $post_id ) {
+  // Image column
+	if ( 'image' === $column ) {
+		echo get_the_post_thumbnail( $post_id, array(80, 80) );
+	}
+}
+add_action( 'manage_podcast_posts_custom_column', 'dkuk_podcast_custom_columns_data', 10, 2);
+	
 
 }
 add_action( 'init', 'dkuk_podcast_cpt', 0 );
